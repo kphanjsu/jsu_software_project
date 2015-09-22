@@ -3,6 +3,11 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public Class UnitTests {
+  private ArgumentParser a;
+  @Before
+  public void start{
+    a = new ArgumentParser;
+  }
 
   //Test
   @Test
