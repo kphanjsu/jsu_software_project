@@ -21,7 +21,9 @@ public Class UnitTests {
 
   public void testOnlyNumbers() {
     ArgumentParser parser = new ArgumentParser();
-    
-
-  }
+    ArgumentParser parser = new ArgumentParser();
+    String[] numberList = {"1", "2", "5"};
+    for (int i = 0; i < numberList.length; i++) {
+      parser.parseIn(numberList[i]);
+    }
 }
