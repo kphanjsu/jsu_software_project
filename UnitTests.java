@@ -12,9 +12,8 @@ public Class UnitTests {
   //Test
   @Test
   public void testAddString() {
-    ArgumentParser parser = new ArgumentParser();
     for (int i = 0; i < 3; i++) {
-      parser.parseIn(i);
+      a.parseIn(i);
     }
     if ()
     return assertTrue(true);
