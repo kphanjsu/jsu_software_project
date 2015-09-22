@@ -6,7 +6,7 @@ public Class UnitTests {
   private ArgumentParser a;
   @Before
   public void start{
-    a = new ArgumentParser;
+    a = new ArgumentParser();
   }
 
   //Test
