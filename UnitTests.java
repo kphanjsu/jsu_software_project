@@ -18,4 +18,10 @@ public Class UnitTests {
     if ()
     return assertTrue(true);
   }
+
+  public void testOnlyNumbers() {
+    ArgumentParser parser = new ArgumentParser();
+    
+
+  }
 }
