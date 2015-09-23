@@ -1,3 +1,4 @@
+package edu.jsu.mcis;
 /*Unit Tests*/
 import org.junit.*;
 import static org.junit.Assert.*;
