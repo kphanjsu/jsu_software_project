@@ -49,7 +49,6 @@ public class ArgumentParser {
    			if(args.length==1){
    				return "usage: java VolumeCalculator length width heigh. VolumeCalculator.java: error: the following arguments are required: width height";
    			}
-
    			else if(args.length==2){
    				return "usage: java VolumeCalculator length width heigh. VolumeCalculator.java: error: the following arguments are required: height";
    			}
@@ -65,14 +64,13 @@ public class ArgumentParser {
    		}
    		return "no values entered";
 	}
+	
    	public static void main(String[] args){
-
    		ArgumentParser Ap= new ArgumentParser();
    		Ap.addPositionalArguments("length");
-			Ap.addPositionalArguments("width");
-			Ap.addPositionalArguments("height");
-			Ap.parse(args);
-
+		Ap.addPositionalArguments("width");
+		Ap.addPositionalArguments("height");
+		Ap.parse(args);
 		System.out.println(Ap.getMessage(args));
 	}
 }
