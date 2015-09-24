@@ -12,6 +12,7 @@ import java.util.*;
 public class ArgumentParser {
 
 	private HashMap<String,String> positionalArguments;
+	//private int m=3;
 	
 	public ArgumentParser(){
 	
@@ -32,18 +33,15 @@ public class ArgumentParser {
 	
 	public void parse(String[] args){
 	
-		if(args.length==1){
+		if(args.length==3){
 			positionalArguments.put("length",args[0]);
-		}
-		else if(args.length==2){
+		
 			positionalArguments.put("width",args[1]);
-			
-			}
-		else if(args.length==3){
 		
 			positionalArguments.put("height",args[2]);
+			}
 				
-		}
+		
 		
 	/*
 		for(String Key: positionalArguments.keySet()){
@@ -74,6 +72,11 @@ public class ArgumentParser {
    		*/
    		
    	}
+   	
+   	
+   	public String getArg(String s){
+   		return positionalArguments.get(s);
+   	}
    		
    		
    	
@@ -84,32 +87,33 @@ public class ArgumentParser {
    	
    	
    	public String getMessage(String[] args){
-   		for(int i=0; i < args.length; i ++){
+   		//for(int i=0; i < args.length; i ++){
    			if(args.length==1){
    				
    				return "usage: java VolumeCalculator length width heigh. VolumeCalculator.java: error: the following arguments are required: width height";
    			
    			}
    			
-   			else if(args.length==2){
+   			if(args.length==2){
    			
    				return "usage: java VolumeCalculator length width heigh. VolumeCalculator.java: error: the following arguments are required: height";
    			
    			}
    			
-   			else if(args.length==3){
+   			if(args.length==3){
    			
    				return "just enough variables";
    			}
    			
-   			else if( args.length>3){
-   				for(int k=3; k < args.length; k++){
-   					return "usage: java VolumeCalculator length width height. VolumeCalculator.java: error: unrecognized arguments:" + args[k];
+   			 if( args.length>3){
+   				 for(int m=3; m < args.length; m++){
+   				 	return "usage: java VolumeCalculator length width height. VolumeCalculator.java: error: unrecognized arguments:" + args[m];
    					}
-   					
-   				}   			
+   				
+   				}
+   			 			
    			
-   		}
+   		//}
    		
    		
    		return "no values entered";
@@ -125,6 +129,7 @@ public class ArgumentParser {
 			
 		*/
 			
+	
 	}
 	
 	/*
@@ -172,6 +177,11 @@ public class ArgumentParser {
 		Ap.parse(args);
 		
 		System.out.println(Ap.getMessage(args));
+		System.out.println(Ap.getArg("width"));
+		System.out.println(Ap.getArg("length"));
+		System.out.println(Ap.getArg("height"));
+   	
+   	
    	
    	
    	
