@@ -17,7 +17,6 @@ public class ArgumentParserTest {
 	@Test
 
 	public void testOnly3numbersEntered(){
-
 		AP.addPositionalArguments("length");
 		AP.addPositionalArguments("width");
 		AP.addPositionalArguments("height");
