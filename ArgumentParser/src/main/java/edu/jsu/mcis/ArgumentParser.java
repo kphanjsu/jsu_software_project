@@ -17,10 +17,6 @@ public class ArgumentParser {
 
 	public void addPositionalArguments(String x) {
 		positionalArguments.put(x, null);
-		//(Key, Value);
-		//(length, null);
-		//(width,null);
-		//(height,null);
 	}
 
 	public void parse(String[] args) {
@@ -33,18 +29,6 @@ public class ArgumentParser {
 		else if(args.length==3) {
 			positionalArguments.put("height",args[2]);
 		}
-	/*
-		for(String Key: positionalArguments.keySet()){
-			if(Key.equals("length")){
-				positionalArguments.put("length",args[0]);
-			}
-			else if(Key.equals("width")){
-				positionalArguments.put("width",args[1]);
-			}
-			else if(Key.equals("height")){
-				positionalArguments.put("height",args[2]);
-			}
- 		}*/
   }
 
 	public Boolean checkIfNumber(String s){
@@ -80,34 +64,7 @@ public class ArgumentParser {
    			}
    		}
    		return "no values entered";
-   		/*
-   		if(args.length>3){
-
-		return tooManyArgs();
-
-			}
-		else
-			return notThatManyArgs();
-		*/
 	}
-
-	/*
-	public String tooManyArgs(){
-		return "usage: java VolumeCalculator length width height. VolumeCalculator.java: error: unrecognized arguments:";
-	}
-
-	public String notThatManyArgs(){
-			return "usage: java VolumeCalculator length width heigh. VolumeCalculator.java: error: the following arguments are required: height";
-	}
-   	public boolean determineSizeOfHashMap(){
-   		if(getSize()==3){
-   			return true;
-   		}
-   		else
-   			return false;
-   	}
-   	*/
-
    	public static void main(String[] args){
 
    		ArgumentParser Ap= new ArgumentParser();
@@ -117,11 +74,5 @@ public class ArgumentParser {
 			Ap.parse(args);
 
 		System.out.println(Ap.getMessage(args));
-
-
-
-
-   	}
-
-
+	}
 }
