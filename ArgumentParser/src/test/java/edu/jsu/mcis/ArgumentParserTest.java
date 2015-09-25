@@ -39,6 +39,27 @@ public class ArgumentParserTest {
 	
 	}
 	
+	@Test
+	
+	public void testOnly1numberEntered(){
+		
+		String[] data={"7"};
+		assertEquals(AP.getMessage(data), "usage: java VolumeCalculator length width heigh. VolumeCalculator.java: error: the following arguments are required: width height");
+	
+	
+	}
+	
+	@Test
+	
+	public void testIfNonumberEntered(){
+	
+		String[] data={};
+		
+		
+		assertEquals(AP.getMessage(data), "no values entered");
+	
+	
+	}
 	
 	
 	@Test
@@ -71,6 +92,37 @@ public class ArgumentParserTest {
 	
 	
 	}
+	
+	
+	@Test
+	
+	public void testGetLength(){
+	
+		AP.addPositionalArguments("length");
+		AP.addPositionalArguments("width");
+		AP.addPositionalArguments("height");
+		String[] data= {"7","5", "3"};
+		AP.parse(data);
+		assertEquals(AP.getArg("length"), "7");
+	
+	
+	
+}
+
+
+	
+
+	@Test
+	
+	public void testGetHelp(){
+		
+		String[] data = {"-h"};
+		assertEquals(AP.getHelpMessage(data), "usage: java VolumeCalculator length width heigh. Calculate the volume of a box. positional arguments: length the length of the box. width the width of the box. height the height of the box");
+	
+	
+	
+	}
+	
 	
 
 
