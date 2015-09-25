@@ -86,13 +86,17 @@ public class ArgumentParser {
    	}
    	
    	
+   
+   	
    	public String getMessage(String[] args){
-   		//for(int i=0; i < args.length; i ++){
+   	
    			if(args.length==1){
    				
    				return "usage: java VolumeCalculator length width heigh. VolumeCalculator.java: error: the following arguments are required: width height";
    			
    			}
+   			
+   			
    			
    			if(args.length==2){
    			
@@ -111,9 +115,10 @@ public class ArgumentParser {
    					}
    				
    				}
+   	
    			 			
    			
-   		//}
+   	
    		
    		
    		return "no values entered";
@@ -166,7 +171,16 @@ public class ArgumentParser {
    	}
    	*/
    	
+   	public String getHelpMessage(String[] args){
+   		for (String help: args){
+   			if (help.equals("-h")){
+   				return "usage: java VolumeCalculator length width heigh. Calculate the volume of a box. positional arguments: length the length of the box. width the width of the box. height the height of the box";
+   			}
+   		}
+   		
+   		return " ";
    	
+   	}
    	
    	public static void main(String[] args){
    		
@@ -177,6 +191,7 @@ public class ArgumentParser {
 		Ap.parse(args);
 		
 		System.out.println(Ap.getMessage(args));
+		//System.out.println(Ap.getHelpMessage(args));
 		System.out.println(Ap.getArg("width"));
 		System.out.println(Ap.getArg("length"));
 		System.out.println(Ap.getArg("height"));
