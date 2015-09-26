@@ -11,68 +11,49 @@ import java.util.*;
 
 public class ArgumentParser {
 
-	private HashMap<String,String> positionalArguments;
-	//private int m=3;
+	private LinkedHashMap<String,String> positionalArguments;
+
 	
 	public ArgumentParser(){
 	
-		positionalArguments= new HashMap<String,String>();
-	
+		positionalArguments= new LinkedHashMap<String,String>();
+		String[] args;
+		 
 	
 	}
 	
 	public void addPositionalArguments(String x){
-		positionalArguments.put(x, null);
+	
+		
+		positionalArguments.put(x,"");
 		//(Key, Value);
 		//(length, null);
 		//(width,null);
 		//(height,null);
 	}
 	
+
 	
 	
 	public void parse(String[] args){
-	
-		if(args.length==3){
-			positionalArguments.put("length",args[0]);
-		
-			positionalArguments.put("width",args[1]);
-		
-			positionalArguments.put("height",args[2]);
-			}
+		int i=0;
+		if(args.length>=3){
+			for(String s: positionalArguments.keySet()){
+				System.out.println(s + "/n"); 
+					Object o=positionalArguments.get(s);
 				
-		
-		
-	/*
-		for(String Key: positionalArguments.keySet()){
-		
-			if(Key.equals("length")){
-				
-				positionalArguments.put("length",args[0]);
 			
+					if(o.equals("")){
+					
+						positionalArguments.put(s,new String(args[i]));
+						i++;
+					}	
+				}
 			}
-			
-			else if(Key.equals("width")){
-				
-				positionalArguments.put("width",args[1]);
-			
-			}
-			
-			else if(Key.equals("height")){
-				
-				positionalArguments.put("height",args[2]);
-			
-			
-			}
-			
-   			 
-   			 
-   			 
-   		}
-   		*/
+      
    		
    	}
-   	
+  
    	
    	public String getArg(String s){
    		return positionalArguments.get(s);
@@ -195,7 +176,18 @@ public class ArgumentParser {
 		System.out.println(Ap.getArg("width"));
 		System.out.println(Ap.getArg("length"));
 		System.out.println(Ap.getArg("height"));
-   	
+		/*
+		ArgumentParser cp=new ArgumentParser();
+		cp.addPositionalArguments("pet");
+		cp.addPositionalArguments("number");
+		cp.addPositionalArguments("rainy");
+		cp.addPositionalArguments("bathrooms");
+		cp.parse(args);
+		
+		System.out.println(cp.getArg("pet"));
+		System.out.println(cp.getArg("number"));
+		System.out.println(cp.getArg("rainy"));
+		*/
    	
    	
    	

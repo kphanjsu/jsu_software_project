@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.jsu.mcis.ArgumentParserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-09-24T01:23:58" hostname="Kurtiss-MacBook-Air.local" time="0.003">
+  <properties/>
+  <testcase name="testMoreThan3NumbersEntered" classname="edu.jsu.mcis.ArgumentParserTest" time="0.002"/>
+  <testcase name="testLessThan3NumbersEntered" classname="edu.jsu.mcis.ArgumentParserTest" time="0.0"/>
+  <testcase name="testNumbersBeingEnteredReturnsTrue" classname="edu.jsu.mcis.ArgumentParserTest" time="0.001"/>
+  <testcase name="testOnly3numbersEntered" classname="edu.jsu.mcis.ArgumentParserTest" time="0.0"/>
+  <testcase name="testNumberBeingEnteredReturnsFalse" classname="edu.jsu.mcis.ArgumentParserTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
