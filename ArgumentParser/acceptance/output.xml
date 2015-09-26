@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.8.5 (Jython 2.5.3 on java1.7.0_45)" generated="20150925 19:43:28.807">
+<suite source="/Users/burdettec/jsu_software_project/ArgumentParser/acceptance/ArgumentParserTest.txt" id="s1" name="ArgumentParserTest">
+<test id="s1-t1" name="Test Volume Calculator Normal Function">
+<kw type="kw" name="ArgumentParserKeywords.Start Volume Calculator With Arguments">
+<doc></doc>
+<arguments>
+<arg>7</arg>
+<arg>5</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20150925 19:43:30.566" level="INFO">length/n
+width/n
+height/n</msg>
+<status status="PASS" endtime="20150925 19:43:30.568" starttime="20150925 19:43:30.541"></status>
+</kw>
+<kw type="kw" name="${length} = ArgumentParserKeywords.Get Length">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:30.588" level="INFO">${length} = 7</msg>
+<status status="PASS" endtime="20150925 19:43:30.586" starttime="20150925 19:43:30.580"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>7</arg>
+<arg>${length}</arg>
+</arguments>
+<msg timestamp="20150925 19:43:30.608" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:30.618" starttime="20150925 19:43:30.599"></status>
+</kw>
+<kw type="kw" name="${width} = ArgumentParserKeywords.Get Width">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:30.634" level="INFO">${width} = 5</msg>
+<status status="PASS" endtime="20150925 19:43:30.631" starttime="20150925 19:43:30.625"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>5</arg>
+<arg>${width}</arg>
+</arguments>
+<msg timestamp="20150925 19:43:30.669" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:30.673" starttime="20150925 19:43:30.648"></status>
+</kw>
+<kw type="kw" name="${height} = ArgumentParserKeywords.Get Height">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:30.704" level="INFO">${height} = 2</msg>
+<status status="PASS" endtime="20150925 19:43:30.702" starttime="20150925 19:43:30.695"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>2</arg>
+<arg>${height}</arg>
+</arguments>
+<msg timestamp="20150925 19:43:30.731" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:30.742" starttime="20150925 19:43:30.720"></status>
+</kw>
+<kw type="kw" name="${output} = ArgumentParserKeywords.Get Program Output">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:30.758" level="INFO">${output} = 70</msg>
+<status status="PASS" endtime="20150925 19:43:30.756" starttime="20150925 19:43:30.750"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>70</arg>
+</arguments>
+<msg timestamp="20150925 19:43:30.797" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:30.801" starttime="20150925 19:43:30.782"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" critical="yes" endtime="20150925 19:43:30.817" starttime="20150925 19:43:30.487"></status>
+</test>
+<test id="s1-t2" name="Test Unrecognized Argument">
+<kw type="kw" name="ArgumentParserKeywords.Start Volume Calculator With Arguments">
+<doc></doc>
+<arguments>
+<arg>7</arg>
+<arg>5</arg>
+<arg>2</arg>
+<arg>43</arg>
+</arguments>
+<msg timestamp="20150925 19:43:30.887" level="INFO">length/n
+width/n
+height/n</msg>
+<status status="PASS" endtime="20150925 19:43:30.890" starttime="20150925 19:43:30.875"></status>
+</kw>
+<kw type="kw" name="${output} = ArgumentParserKeywords.Get Program Output">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:30.913" level="INFO">${output} = 70</msg>
+<status status="PASS" endtime="20150925 19:43:30.911" starttime="20150925 19:43:30.897"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${output}</arg>
+<arg>70</arg>
+</arguments>
+<msg timestamp="20150925 19:43:30.943" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:30.948" starttime="20150925 19:43:30.931"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" critical="yes" endtime="20150925 19:43:30.970" starttime="20150925 19:43:30.828"></status>
+</test>
+<test id="s1-t3" name="Test Absurd Program Normal Function">
+<kw type="kw" name="ArgumentParserKeywords.Start Absurd Program With Arguments">
+<doc></doc>
+<arguments>
+<arg>dog</arg>
+<arg>2</arg>
+<arg>true</arg>
+<arg>3.5</arg>
+</arguments>
+<msg timestamp="20150925 19:43:31.039" level="INFO">pet/n
+number/n
+rainy/n
+bathrooms/n</msg>
+<status status="PASS" endtime="20150925 19:43:31.042" starttime="20150925 19:43:31.020"></status>
+</kw>
+<kw type="kw" name="${pet} = ArgumentParserKeywords.Get Pet">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:31.082" level="INFO">${pet} = dog</msg>
+<status status="PASS" endtime="20150925 19:43:31.079" starttime="20150925 19:43:31.061"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>dog</arg>
+<arg>${pet}</arg>
+</arguments>
+<msg timestamp="20150925 19:43:31.103" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:31.107" starttime="20150925 19:43:31.094"></status>
+</kw>
+<kw type="kw" name="${number} = ArgumentParserKeywords.Get Number">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:31.139" level="INFO">${number} = 2</msg>
+<status status="PASS" endtime="20150925 19:43:31.136" starttime="20150925 19:43:31.126"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>2</arg>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20150925 19:43:31.167" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:31.171" starttime="20150925 19:43:31.157"></status>
+</kw>
+<kw type="kw" name="${rainy} = ArgumentParserKeywords.Get Rainy">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:31.197" level="INFO">${rainy} = true</msg>
+<status status="PASS" endtime="20150925 19:43:31.195" starttime="20150925 19:43:31.188"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>true</arg>
+<arg>${rainy}</arg>
+</arguments>
+<msg timestamp="20150925 19:43:31.225" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:31.237" starttime="20150925 19:43:31.212"></status>
+</kw>
+<kw type="kw" name="${bathrooms} = ArgumentParserKeywords.Get Bathrooms">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150925 19:43:31.260" level="INFO">${bathrooms} = 3.5</msg>
+<status status="PASS" endtime="20150925 19:43:31.254" starttime="20150925 19:43:31.244"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>3.5</arg>
+<arg>${bathrooms}</arg>
+</arguments>
+<msg timestamp="20150925 19:43:31.290" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150925 19:43:31.295" starttime="20150925 19:43:31.281"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" critical="yes" endtime="20150925 19:43:31.310" starttime="20150925 19:43:30.981"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150925 19:43:31.355" starttime="20150925 19:43:28.830"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" id="s1" fail="0" name="ArgumentParserTest">ArgumentParserTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20150925 19:43:30.577" level="WARN">Keyword 'Get Length' found both from a user created test library 'ArgumentParserKeywords' and Robot Framework standard library 'BuiltIn'. The user created keyword is used. To select explicitly, and to get rid of this warning, use either 'ArgumentParserKeywords.Get Length' or 'BuiltIn.Get Length'.</msg>
+</errors>
+</robot>
